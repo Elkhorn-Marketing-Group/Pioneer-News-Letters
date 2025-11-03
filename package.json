@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters#readme",
   "devDependencies": {
+    "@react-email/preview-server": "^4.3.2",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "react-email": "4.3.2"
