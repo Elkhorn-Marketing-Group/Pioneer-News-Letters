@@ -1,0 +1,28 @@
+{
+  "name": "pioneer-news-letters",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "email dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/issues"
+  },
+  "homepage": "https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters#readme",
+  "devDependencies": {
+    "react-email": "4.3.2"
+  },
+  "dependencies": {
+    "@react-email/components": "0.5.7",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  }
+}
