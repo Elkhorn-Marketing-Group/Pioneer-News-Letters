@@ -1,22 +1,150 @@
-import { Html, Button } from "@react-email/components";
-import React from "react";
+import { Html, Img } from "@react-email/components";
+import MyHeader from "./myHeader";
+import SectionDivider from "./sectiondivider";
+import OneColOneImg from "./OneColOneImg";
+import TwoImgOnly from "./TwoImgOnly";
 
-
-export default function Email() {
+export default function Q4() {
   return (
     <Html>
-      <div data-layer="Hero1" className="Hero1" style={{ width: 640, flexDirection: "column", justifyContent: "flex-start", alignItems: "center", gap: 30, display: "inline-flex" }}>
-        <div data-layer="headerimg" className="Headerimg" style={{ alignSelf: "stretch", position: "relative", flexDirection: "column", justifyContent: "flex-start", alignItems: "flex-start", display: "flex" }}>
-          <div data-layer="divider-top" className="DividerTop" style={{ alignSelf: "stretch", height: 35, background: "#084A7D" }} />
-          <img data-layer="HeaderImage" className="Headerimage" style={{ alignSelf: "stretch", height: 309 }} src="https://placehold.co/640x309" />
-          <div data-layer="divider" className="Divider" style={{ width: 640, height: 56, left: 0, top: 288, position: "absolute", background: "#084A7D" }} />
-          <div data-layer="Heading text" className="HeadingText" style={{ left: 223, top: 306, position: "absolute", textAlign: "center", color: "white", fontSize: 24, fontFamily: "Guardian Sans", fontWeight: "400", textTransform: "uppercase", lineHeight: 20, wordWrap: "break-word" }}>Fall Newsletter</div>
-        </div>
-        <div data-layer="Welcome Text" className="WelcomeText" style={{ width: 475, flexDirection: "column", justifyContent: "flex-start", alignItems: "center", gap: 16, display: "flex" }}>
-          <div data-layer="Header" className="Header" style={{ alignSelf: "stretch", textAlign: "center", color: "black", fontSize: 18, fontFamily: "Calibri", fontWeight: "700", wordWrap: "break-word" }}>Hello from Pioneer Financial!</div>
-          <div data-layer="Caption" className="Caption" style={{ alignSelf: "stretch", height: 76, textAlign: "center", color: "black", fontSize: 13, fontFamily: "Calibri", fontWeight: "400", wordWrap: "break-word" }}>Welcome to our Q4 Newsletter! We’re excited to share some updates from our team with you, from professional achievements to memorable events. We hope you enjoy catching up with us — and as always, we’re grateful to be part of your journey.</div>
-        </div>
-      </div>
+      <MyHeader
+        headerImg="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/HeaderImage.png?raw=true"
+        letterTitle="Fall Newsletter"
+        letterHeading="Hello from Pioneer Financial!"
+        letterIntro="Welcome to our Q4 Newsletter! We’re excited to share some updates from our team with you, from professional achievements to memorable events. We hope you enjoy catching up with us — and as always, we’re grateful to be part of your journey."
+      />
+      <SectionDivider sectionHeading="Celebrating 20 years!" />
+      <OneColOneImg
+        image="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/20years-img.png?raw=true"
+        paragraphs={[
+          {
+            text: "This year marks Pioneer Financial's 20th anniversary! Since 2003, our founders, Kevin Luchetta, CFP®, AEP®, Stephen Schwartz, CFP®, AEP®, Paul Tortorella, and Jim DiNardo, CFP®, ChFC®, CLU®, MSFS®, RICP® have been dedicated to providing holistic financial planning culminating in the official establishment of Pioneer Financial in 2005. What started with a vision to integrate insurance, investment, and financial advice has grown into a thriving firm.",
+            isBullet: false,
+          },
+          {
+            text: "Today, with a new generation of leaders like Brandon Luke CFP®, CIMA®, ChFC®, CLU®, RICP® and Rita Konnov, we continue to innovate and serve our clients with integrity. Thank you to our amazing team, loyal clients, and supportive partners for being part of our journey. Here's to many more years of pioneering solutions and exceptional service!",
+            isBullet: false,
+          },
+        ]}
+      />
+      <SectionDivider sectionHeading="Meet our New Partners" />
+      <OneColOneImg
+        image="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/Newpartners.png?raw=true"
+        paragraphs={[
+          {
+            text: "As a monumental update to the firm, we are proud to announce the addition of new partners Brandon Luke, CFP®, CIMA®, ChFC®, CLU®, RICP®, and Rita Konnov.",
+            isBullet: false,
+          },
+          {
+            text: "Brandon will continue to empower our team and serve top clients. Since joining in 2010, he's been instrumental in fostering growth and excellence. A Columbia University graduate, he resides in the Bronx, NY.",
+            isBullet: false,
+          },
+          {
+            text: "Rita will lead internal control and process innovation. Since 2006, she's driven firmwide efficiency and development. She holds a B.A. in Economics from Hunter College and lives in Merrick, NY.",
+            isBullet: false,
+          },
+        ]}
+      />
+      <SectionDivider sectionHeading="We're #1" />
+      <OneColOneImg
+        image="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/Pathfinder-img.png?raw=true"
+        paragraphs={[
+          "Pioneer Financial had the distinct honor of being recognized as the #1 Pathfinder Firm within Northwestern Mutual! This marks the inaugural year of this prestigious award, and we are incredibly humbled to be honored to have been acknowledged. ",
+          "For two decades, our dedicated team has worked tirelessly to ensure our clients receive the highest level of excellence and care in planning their financial futures. Being acknowledged on stage as an ensemble further solidifies our commitment and deepens our relationship with our clients, Northwestern Mutual, and the entire Pioneer team. ",
+          "A heartfelt thank you to everyone involved in making this achievement possible — here's to 20 years of success and forging even brighter financial futures together! We invite you to celebrate with us.",
+          <>
+            Watch the video{" "}
+            <a
+              href="https://www.example.com/celebration-video"
+              style={{ color: "#084A7D", textDecoration: "underline" }}
+            >
+              here
+            </a>
+            !
+          </>,
+        ]}
+      />
+      <SectionDivider sectionHeading="We're #1" />
+      <TwoImgOnly
+        Img1="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/Forbes-TopFinancialSecurity.png?raw=true"
+        Img2="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/Forbes-BestInState.png?raw=true"
+      />
+      <TwoImgOnly
+        Img1="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/Forbes-bestInStateTeams.png?raw=true"
+        Img2="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/Forbes-BestInStateSecurity.png?raw=true"
+        paragraphs={[
+          "Congratulations to our partners Jim DiNardo, CFP®, ChFC®, CLU®, MSFS®, RICP®, Kevin Luchetta, CFP®, AEP®, and Stephen Schwartz, CFP®, AEP®, along with team members John Parisi and Alex Klein, for being recognized by Forbes as Top Financial Security Professionals and Best-in-State Financial Security Professionals.",
+          "Additionally, we’re thrilled to celebrate Jim DiNardo, CFP®, ChFC®, CLU®, MSFS®, RICP®, Kevin Luchetta, CFP®, AEP®, and Stephen Schwartz, CFP®, AEP®, for also being named to Forbes’ 2025 Best-in-State Wealth Advisors list.",
+          "We’re equally honored that Pioneer Financial has been recognized among Forbes’ 2025 Best-In-State Wealth Management Teams. These distinctions highlight the exceptional dedication, expertise, and client-first commitment that define our firm. Thank you to our incredible team and valued clients for your continued trust and support. We look forward to serving you with excellence in the year ahead!",
+        ]}
+      />
+      <SectionDivider sectionHeading="Team Updates" />
+      <OneColOneImg
+        image="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/TeamPhoto.png?raw=true"
+        paragraphs={[
+          {
+            text: "We’re excited to announce the continued growth of our team at Pioneer Financial with the addition of several talented professionals who bring a wealth of experience and dedication to our clients and firm.",
+            isBullet: false,
+          },
+          {
+            text: "Please Join us in Welcoming",
+            isBullet: false,
+          },
+          {
+            text: "Jonathan Clay, Associate Director – Practice Integration",
+            isBullet: true,
+          },
+          {
+            text: "Daisy Crystal, Service Advisor",
+            isBullet: true,
+          },
+          {
+            text: "Reaan Sarker, Investment Client Service Associate",
+            isBullet: true,
+          },
+        ]}
+      />
+      <TwoImgOnly
+        Img1="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/PhilipCoffmam-Headshot.png?raw=true"
+        Img2="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/ErikConstantino-Headshot.png?raw=true"
+        paragraphs={[
+          {
+            text: "Advisor Affiliates",
+            isBullet: false,
+          },
+          {
+            text: "Philip Coffman CFP®, ChFC®, CLU®, Wealth Management Advisor (on the left)",
+            isBullet: true,
+          },
+          {
+            text: "Erik Constantino CFP®, CLU®, ChFC®, Wealth Management Advisor (on the right)",
+            isBullet: true,
+          },
+          {
+            text: "",
+            isBullet: false,
+          },
+          {
+            text: "Each brings valuable expertise and a shared commitment to delivering exceptional service and supporting our mission of helping clients achieve financial confidence and success. We're thrilled to have them on board and look forward to the positive impact they'll make across our team and client community.",
+            isBullet: false,
+          },
+        ]}
+      />
+      <SectionDivider sectionHeading="Culture and Community" />
+      <TwoImgOnly
+        Img1="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/ALSF-teamphoto.png?raw=true"
+        Img2="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/ALSF-stand.png?raw=true"
+        paragraphs={[
+          {
+            text: "Our team had a fantastic day at The Country Club Of Darien for our 12th annual golf outing in support of Alex's Lemonade Stand Foundation! Pioneer Financial was truly honored to sponsor the pickleball activities and serve refreshing lemonade at our stand, contributing to an unforgettable experience.",
+            isBullet: false,
+          },
+          {
+            text: "Together, we made a meaningful impact in backing Alex's Lemonade Stand Foundation and their vital mission to combat childhood cancer. Your dedication and enthusiasm drive change, and we’re proud to be part of this incredible community effort.",
+            isBullet: false,
+          },
+        ]}
+      />
     </Html>
   );
 }
