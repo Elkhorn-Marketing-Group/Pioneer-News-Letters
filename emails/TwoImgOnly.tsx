@@ -12,8 +12,8 @@ interface TwoImgOnlyProps {
 }
 
 export default function TwoImgOnly({
-  Img1 = "https://placehold.co/220x220",
-  Img2 = "https://placehold.co/220x220",
+  Img1 = "",
+  Img2 = "",
   paragraphs = [],
 }: TwoImgOnlyProps) {
   return (
