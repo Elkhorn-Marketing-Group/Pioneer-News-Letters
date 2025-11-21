@@ -162,7 +162,7 @@ export default function Q4() {
       />
       <TwoColOneImg
         imgLeft={true}
-        img="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/KelseyRauber-Headshot.jpg?raw=true"
+        img=""
         paragraphs={[
           {
             text: "We are delighted to announce that Kelsey Rauber has joined our Diversity, Equity, and Inclusion (DEI) Committee at Pioneer Financial. Our commitment to building a culture where everyone belongs is strengthened through intentional connections and open dialogue, enhancing both our team and client service. ",
