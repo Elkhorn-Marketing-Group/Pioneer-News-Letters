@@ -80,6 +80,10 @@ export default function Q4() {
       />
       <SectionDivider sectionHeading="Team Updates" />
       <TwoImgOnly
+        Img1="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/JenEvanko-headshot.jpg?raw=true"
+        Img2="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/ReaanSarker-Headshot.jpg?raw=true"
+      />
+      <TwoImgOnly
         Img1="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/JonathanClay-headshot.jpg?raw=true"
         Img2="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/DasiyCrystal-headshot.jpg?raw=true"
         paragraphs={[
@@ -152,6 +156,20 @@ export default function Q4() {
         paragraphs={[
           {
             text: "Earlier this year, Ilene Medina was appointed to lead our Network Office’s Hispanic & Latinx Affinity Group. The group is excited for this new chapter and for the thoughtfulness she has already brought to the organization for Hispanic Heritage month. Congratulations, Ilene!",
+            isBullet: false,
+          },
+        ]}
+      />
+      <TwoColOneImg
+        imgLeft={true}
+        img="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/KelseyRauber-Headshot.jpg?raw=true"
+        paragraphs={[
+          {
+            text: "We are delighted to announce that Kelsey Rauber has joined our Diversity, Equity, and Inclusion (DEI) Committee at Pioneer Financial. Our commitment to building a culture where everyone belongs is strengthened through intentional connections and open dialogue, enhancing both our team and client service. ",
+            isBullet: false,
+          },
+          {
+            text: "We are delighted to announce that Kelsey Rauber has joined our Diversity, Equity, and Inclusion (DEI) Committee at Pioneer Financial. Our commitment to building a culture where everyone belongs is strengthened through intentional connections and open dialogue, enhancing both our team and client service. Our D&I Committee, dedicated to understanding our shared humanity, conducts annual heritage interviews to celebrate and appreciate our diverse backgrounds. These conversations enrich our understanding and highlight how our differences shape our journey, making us better coworkers and advocates for our clients. Welcome, Kelsey, to this exciting journey of growth and inclusivity!",
             isBullet: false,
           },
         ]}
