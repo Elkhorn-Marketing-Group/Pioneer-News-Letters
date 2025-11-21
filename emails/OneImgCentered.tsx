@@ -49,7 +49,29 @@ export default function OneImgCentered({
             display: "inline-flex",
           }}
         >
-          <img style={{ width: imageWidth, height: imageHeight }} src={image} />
+          {image ? (
+            <div
+              style={{
+                width: imageWidth,
+                height: imageHeight,
+                overflow: "hidden",
+                display: "block",
+              }}
+            >
+              <img
+                src={image}
+                alt=""
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  display: "block",
+                }}
+              />
+            </div>
+          ) : (
+            <div style={{ width: imageWidth, height: imageHeight }} />
+          )}
         </div>
 
         {paragraphs.length > 0 && (

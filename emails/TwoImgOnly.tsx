@@ -47,8 +47,52 @@ export default function TwoImgOnly({
             display: "inline-flex",
           }}
         >
-          <img style={{ width: 220, height: 220 }} src={Img1} />
-          <img style={{ width: 220, height: 220 }} src={Img2} />
+          {Img1 ? (
+            <div
+              style={{
+                width: 220,
+                height: 220,
+                overflow: "hidden",
+                display: "block",
+              }}
+            >
+              <img
+                src={Img1}
+                alt=""
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  display: "block",
+                }}
+              />
+            </div>
+          ) : (
+            <div style={{ width: 220, height: 220 }} />
+          )}
+          {Img2 ? (
+            <div
+              style={{
+                width: 220,
+                height: 220,
+                overflow: "hidden",
+                display: "block",
+              }}
+            >
+              <img
+                src={Img2}
+                alt=""
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  display: "block",
+                }}
+              />
+            </div>
+          ) : (
+            <div style={{ width: 220, height: 220 }} />
+          )}
         </div>
         <div
           style={{

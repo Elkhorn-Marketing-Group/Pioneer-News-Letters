@@ -80,8 +80,8 @@ export default function Q4() {
       />
       <SectionDivider sectionHeading="Team Updates" />
       <TwoImgOnly
-        Img1="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/TeamPhoto.png?raw=true"
-        Img2=""
+        Img1="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/JonathanClay-headshot.jpg?raw=true"
+        Img2="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/DasiyCrystal-headshot.jpg?raw=true"
         paragraphs={[
           {
             text: "We’re excited to announce the continued growth of our team at Pioneer Financial with the addition of several talented professionals who bring a wealth of experience and dedication to our clients and firm.",
