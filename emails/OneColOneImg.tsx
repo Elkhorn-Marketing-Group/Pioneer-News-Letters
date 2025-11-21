@@ -7,7 +7,7 @@ interface ParagraphItem {
 
 interface OneColOneImgProps {
   image?: string;
-  paragraphs: (string | JSX.Element | ParagraphItem)[];
+  paragraphs?: (string | JSX.Element | ParagraphItem)[];
 }
 
 export default function OneColOneImg({

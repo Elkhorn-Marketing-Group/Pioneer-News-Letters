@@ -3,6 +3,9 @@ import MyHeader from "./myHeader";
 import SectionDivider from "./sectiondivider";
 import OneColOneImg from "./OneColOneImg";
 import TwoImgOnly from "./TwoImgOnly";
+import OneImgCentered from "./OneImgCentered";
+import TwoColOneImg from "./TwoColOneImg";
+import Footer from "./footer";
 
 export default function Q4() {
   return (
@@ -65,10 +68,7 @@ export default function Q4() {
         ]}
       />
       <SectionDivider sectionHeading="We're #1" />
-      <TwoImgOnly
-        Img1="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/Forbes-TopFinancialSecurity.png?raw=true"
-        Img2="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/Forbes-BestInState.png?raw=true"
-      />
+      <OneImgCentered image="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/Forbes-BestInState.png?raw=true" />
       <TwoImgOnly
         Img1="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/Forbes-bestInStateTeams.png?raw=true"
         Img2="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/Forbes-BestInStateSecurity.png?raw=true"
@@ -79,8 +79,9 @@ export default function Q4() {
         ]}
       />
       <SectionDivider sectionHeading="Team Updates" />
-      <OneColOneImg
-        image="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/TeamPhoto.png?raw=true"
+      <TwoImgOnly
+        Img1="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/TeamPhoto.png?raw=true"
+        Img2=""
         paragraphs={[
           {
             text: "We’re excited to announce the continued growth of our team at Pioneer Financial with the addition of several talented professionals who bring a wealth of experience and dedication to our clients and firm.",
@@ -144,6 +145,41 @@ export default function Q4() {
             isBullet: false,
           },
         ]}
+      />
+
+      <TwoColOneImg
+        img="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/IleneMedian-headshot.png?raw=true"
+        paragraphs={[
+          {
+            text: "Earlier this year, Ilene Medina was appointed to lead our Network Office’s Hispanic & Latinx Affinity Group. The group is excited for this new chapter and for the thoughtfulness she has already brought to the organization for Hispanic Heritage month. Congratulations, Ilene!",
+            isBullet: false,
+          },
+        ]}
+      />
+      <SectionDivider sectionHeading="Market Commentary" />
+      <OneColOneImg
+        image="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/Image.png?raw=true"
+        paragraphs={[
+          <>
+            Check out the latest market commentary from Northwestern Mutual's
+            Chief Investment Officer, Brent Schutte,{" "}
+            <a
+              href="https://www.northwesternmutual.com/life-and-money/market-commentary/weekly-market-commentary/"
+              style={{ color: "#084A7D", textDecoration: "underline" }}
+            >
+              here
+            </a>
+            !
+          </>,
+        ]}
+      />
+      <Footer
+        addresses={`New York Office<br/>300 Madison Ave, 26th Floor, New York, NY 10017<br/>Farmingdale Office<br/>500 Bi County Blvd, Ste 200E, Farmingdale, NY 11735<br/>Paramus Office<br/>80 W Century Road, Ste 300, Paramus, NJ 07652<br/>Norwalk Office<br/>50 Washington St, Ste 600W, Norwalk, CT 06854`}
+        linkedinText="Follow us on LinkedIn"
+        linkedinUrl="https://www.linkedin.com/company/pioneer-financial"
+        imageUrl="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/Logo.png?raw=true"
+        imageAlt="Footer Image"
+        disclosure=""
       />
     </Html>
   );
