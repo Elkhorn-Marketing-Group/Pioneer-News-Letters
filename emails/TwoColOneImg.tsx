@@ -17,190 +17,161 @@ export default function TwoColOneImg({
   imgLeft = false,
 }: TwoColOneImgProps) {
   return (
-    <div>
-      <div
-        style={{
-          width: 640,
-          paddingTop: 15,
-          paddingBottom: 15,
-          justifyContent: "center",
-          alignItems: "center",
-          gap: 64,
-          display: "inline-flex",
-          boxSizing: "border-box",
-        }}
-      >
-        <div
-          style={{
-            width: 579,
-            justifyContent: "space-between",
-            alignItems: "center",
-            display: "flex",
-          }}
-        >
-          {imgLeft ? (
-            <>
-              <div
-                style={{
-                  width: 246,
-                  display: "inline-flex",
-                  justifyContent: "flex-start",
-                  alignItems: "flex-start",
-                }}
-              >
-                {img ? (
-                  <div
-                    style={{
-                      width: 246,
-                      height: 246,
-                      overflow: "hidden",
-                      border: "4px solid #084A7D",
-                      boxSizing: "border-box",
-                    }}
-                  >
-                    <img
-                      src={img}
-                      alt=""
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                        display: "block",
-                        boxSizing: "border-box",
-                      }}
-                    />
-                  </div>
-                ) : (
-                  <div style={{ width: 246, height: 246 }} />
-                )}
-              </div>
-
-              <div
-                style={{
-                  width: 269,
-                  color: "black",
-                  fontSize: 12,
-                  fontFamily: "Calibri",
-                  fontWeight: "400",
-                  wordWrap: "break-word",
-                }}
-              >
-                {paragraphs.map((paragraph, index) => {
-                  const isParagraphItem =
-                    typeof paragraph === "object" && "text" in paragraph;
-                  const content = isParagraphItem
-                    ? (paragraph as ParagraphItem).text
-                    : paragraph;
-                  const isBullet = isParagraphItem
-                    ? (paragraph as ParagraphItem).isBullet
-                    : false;
-
-                  return (
-                    <div
-                      key={index}
-                      style={{
-                        color: "black",
-                        fontSize: 13,
-                        fontFamily: "Calibri",
-                        fontWeight: "400",
-                        wordWrap: "break-word",
-                        display: "flex",
-                        alignItems: "flex-start",
-                        gap: 8,
-                        marginBottom: isBullet ? 4 : 16,
-                      }}
-                    >
-                      {isBullet && <span style={{ marginRight: 4 }}>•</span>}
-                      <div style={{ flex: 1 }}>{content}</div>
-                    </div>
-                  );
-                })}
-              </div>
-            </>
-          ) : (
-            <>
-              <div
-                style={{
-                  width: 269,
-                  color: "black",
-                  fontSize: 12,
-                  fontFamily: "Calibri",
-                  fontWeight: "400",
-                  wordWrap: "break-word",
-                }}
-              >
-                {paragraphs.map((paragraph, index) => {
-                  const isParagraphItem =
-                    typeof paragraph === "object" && "text" in paragraph;
-                  const content = isParagraphItem
-                    ? (paragraph as ParagraphItem).text
-                    : paragraph;
-                  const isBullet = isParagraphItem
-                    ? (paragraph as ParagraphItem).isBullet
-                    : false;
-
-                  return (
-                    <div
-                      key={index}
-                      style={{
-                        color: "black",
-                        fontSize: 13,
-                        fontFamily: "Calibri",
-                        fontWeight: "400",
-                        wordWrap: "break-word",
-                        display: "flex",
-                        alignItems: "flex-start",
-                        gap: 8,
-                        marginBottom: isBullet ? 4 : 16,
-                      }}
-                    >
-                      {isBullet && <span style={{ marginRight: 4 }}>•</span>}
-                      <div style={{ flex: 1 }}>{content}</div>
-                    </div>
-                  );
-                })}
-              </div>
-
-              <div
-                style={{
-                  width: 246,
-                  flexDirection: "column",
-                  justifyContent: "flex-start",
-                  alignItems: "flex-start",
-                  gap: 8,
-                  display: "inline-flex",
-                }}
-              >
-                {img ? (
-                  <div
-                    style={{
-                      width: 246,
-                      height: 246,
-                      overflow: "hidden",
-                      border: "4px solid #084A7D",
-                      boxSizing: "border-box",
-                    }}
-                  >
-                    <img
-                      src={img}
-                      alt=""
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        objectFit: "cover",
-                        display: "block",
-                        boxSizing: "border-box",
-                      }}
-                    />
-                  </div>
-                ) : (
-                  <div style={{ width: 246, height: 246 }} />
-                )}
-              </div>
-            </>
-          )}
-        </div>
-      </div>
-    </div>
+    <table
+      width={640}
+      align="center"
+      cellPadding={0}
+      cellSpacing={0}
+      style={{ borderCollapse: "collapse", paddingTop: 15, paddingBottom: 15 }}
+    >
+      <tbody>
+        <tr>
+          <td align="center">
+            <table
+              width={579}
+              cellPadding={0}
+              cellSpacing={0}
+              style={{ borderCollapse: "collapse" }}
+            >
+              <tbody>
+                <tr>
+                  {imgLeft ? (
+                    <>
+                      <td width={246} valign="top" style={{ paddingRight: 12 }}>
+                        {img ? (
+                          <img
+                            src={img}
+                            alt=""
+                            width={246}
+                            height={246}
+                            style={{
+                              display: "block",
+                              border: "4px solid #084A7D",
+                              boxSizing: "border-box",
+                              width: "246px",
+                              height: "246px",
+                            }}
+                          />
+                        ) : (
+                          <div style={{ width: 246, height: 246 }} />
+                        )}
+                      </td>
+                      <td
+                        width={269}
+                        valign="top"
+                        style={{
+                          color: "black",
+                          fontSize: 12,
+                          fontFamily: "Calibri",
+                          fontWeight: 400,
+                        }}
+                      >
+                        {paragraphs.map((paragraph, index) => {
+                          const isParagraphItem =
+                            typeof paragraph === "object" &&
+                            "text" in paragraph;
+                          const content = isParagraphItem
+                            ? (paragraph as ParagraphItem).text
+                            : paragraph;
+                          const isBullet = isParagraphItem
+                            ? (paragraph as ParagraphItem).isBullet
+                            : false;
+                          return (
+                            <div
+                              key={index}
+                              style={{
+                                color: "black",
+                                fontSize: 13,
+                                fontFamily: "Calibri",
+                                fontWeight: 400,
+                                marginBottom: isBullet ? 4 : 16,
+                              }}
+                            >
+                              {isBullet ? (
+                                <div>
+                                  <span style={{ marginRight: 4 }}>•</span>
+                                  <span>{content}</span>
+                                </div>
+                              ) : (
+                                <div>{content}</div>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </td>
+                    </>
+                  ) : (
+                    <>
+                      <td
+                        width={269}
+                        valign="top"
+                        style={{
+                          color: "black",
+                          fontSize: 12,
+                          fontFamily: "Calibri",
+                          fontWeight: 400,
+                        }}
+                      >
+                        {paragraphs.map((paragraph, index) => {
+                          const isParagraphItem =
+                            typeof paragraph === "object" &&
+                            "text" in paragraph;
+                          const content = isParagraphItem
+                            ? (paragraph as ParagraphItem).text
+                            : paragraph;
+                          const isBullet = isParagraphItem
+                            ? (paragraph as ParagraphItem).isBullet
+                            : false;
+                          return (
+                            <div
+                              key={index}
+                              style={{
+                                color: "black",
+                                fontSize: 13,
+                                fontFamily: "Calibri",
+                                fontWeight: 400,
+                                marginBottom: isBullet ? 4 : 16,
+                              }}
+                            >
+                              {isBullet ? (
+                                <div>
+                                  <span style={{ marginRight: 4 }}>•</span>
+                                  <span>{content}</span>
+                                </div>
+                              ) : (
+                                <div>{content}</div>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </td>
+                      <td width={246} valign="top" style={{ paddingLeft: 12 }}>
+                        {img ? (
+                          <img
+                            src={img}
+                            alt=""
+                            width={246}
+                            height={246}
+                            style={{
+                              display: "block",
+                              border: "4px solid #084A7D",
+                              boxSizing: "border-box",
+                              width: "246px",
+                              height: "246px",
+                            }}
+                          />
+                        ) : (
+                          <div style={{ width: 246, height: 246 }} />
+                        )}
+                      </td>
+                    </>
+                  )}
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   );
 }

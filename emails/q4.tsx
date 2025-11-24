@@ -58,7 +58,7 @@ export default function Q4() {
           <>
             Watch the video{" "}
             <a
-              href="https://www.example.com/celebration-video"
+              href="https://www.youtube.com/watch?v=0vD54VDq2iE&themeRefresh=1"
               style={{ color: "#084A7D", textDecoration: "underline" }}
             >
               here
@@ -76,6 +76,16 @@ export default function Q4() {
           "Congratulations to our partners Jim DiNardo, CFP®, ChFC®, CLU®, MSFS®, RICP®, Kevin Luchetta, CFP®, AEP®, and Stephen Schwartz, CFP®, AEP®, along with team members John Parisi and Alex Klein, for being recognized by Forbes as Top Financial Security Professionals and Best-in-State Financial Security Professionals.",
           "Additionally, we’re thrilled to celebrate Jim DiNardo, CFP®, ChFC®, CLU®, MSFS®, RICP®, Kevin Luchetta, CFP®, AEP®, and Stephen Schwartz, CFP®, AEP®, for also being named to Forbes’ 2025 Best-in-State Wealth Advisors list.",
           "We’re equally honored that Pioneer Financial has been recognized among Forbes’ 2025 Best-In-State Wealth Management Teams. These distinctions highlight the exceptional dedication, expertise, and client-first commitment that define our firm. Thank you to our incredible team and valued clients for your continued trust and support. We look forward to serving you with excellence in the year ahead!",
+          {
+            text: "Forbes Best-in-State Top Financial Security Professionals  list (July 2025), based upon data as of December 31st of the preceding year. Forbes Best-in-State Wealth Advisors list (April 2025), based upon data as of June 30th of the preceding year. Forbes Best-In-State Wealth Management Teams (January 2025), based upon data as March 31st of preceding year. Research and rankings developed by SHOOK Research, LLC. Northwestern Mutual & its advisors do not pay for placement on 3rd party rating lists, but do pay marketing fees to these organizations to promote the rating(s). Rankings and recognitions are no guarantee of future investment success.",
+            isBullet: false,
+            style: {
+              fontSize: "8px",
+              lineHeight: "1.2",
+              color: "#666",
+              marginTop: 4,
+            },
+          },
         ]}
       />
       <SectionDivider sectionHeading="Team Updates" />
@@ -96,15 +106,19 @@ export default function Q4() {
             isBullet: false,
           },
           {
-            text: "Jonathan Clay, Associate Director – Practice Integration",
+            text: "Jonathan Clay, Associate Director – Practice Integration (top left)",
             isBullet: true,
           },
           {
-            text: "Daisy Crystal, Service Advisor",
+            text: "Daisy Crystal, Service Associate (top right)",
             isBullet: true,
           },
           {
-            text: "Reaan Sarker, Investment Client Service Associate",
+            text: "Jennifer Evanko, Service Associate (bottom left)",
+            isBullet: true,
+          },
+          {
+            text: "Reaan Sarker, Investment Client Service Associate (bottom right)",
             isBullet: true,
           },
         ]}
@@ -162,7 +176,7 @@ export default function Q4() {
       />
       <TwoColOneImg
         imgLeft={true}
-        img=""
+        img="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/KelseyRauber-Headshot.jpg?raw=true"
         paragraphs={[
           {
             text: "We are delighted to announce that Kelsey Rauber has joined our Diversity, Equity, and Inclusion (DEI) Committee at Pioneer Financial. Our commitment to building a culture where everyone belongs is strengthened through intentional connections and open dialogue, enhancing both our team and client service. ",
@@ -194,7 +208,7 @@ export default function Q4() {
       <Footer
         addresses={`New York Office<br/>300 Madison Ave, 26th Floor, New York, NY 10017<br/>Farmingdale Office<br/>500 Bi County Blvd, Ste 200E, Farmingdale, NY 11735<br/>Paramus Office<br/>80 W Century Road, Ste 300, Paramus, NJ 07652<br/>Norwalk Office<br/>50 Washington St, Ste 600W, Norwalk, CT 06854`}
         linkedinText="Follow us on LinkedIn"
-        linkedinUrl="https://www.linkedin.com/company/pioneer-financial"
+        linkedinUrl="https://www.linkedin.com/company/pioneer-financial/"
         imageUrl="https://github.com/Elkhorn-Marketing-Group/Pioneer-News-Letters/blob/main/Q4-Photos/Logo.png?raw=true"
         imageAlt="Footer Image"
         disclosure=""

@@ -8,38 +8,45 @@ export default function SectionDivider({
   sectionHeading = "",
 }: DividerProps) {
   return (
-    <div
+    <tabnpm
+      run
+      DividerPropsle
+      width={640}
+      align="center"
+      cellPadding={0}
+      cellSpacing={0}
+      style={{ borderCollapse: "collapse" }}
       data-layer="SectionDivider"
       className="Sectiondivider"
-      style={{
-        width: 640,
-        height: 40,
-        paddingTop: 0,
-        paddingBottom: 0,
-        background: backgroundColor,
-        justifyContent: "center",
-        alignItems: "center",
-        display: "inline-flex",
-        alignSelf: "stretch",
-      }}
     >
-      <div
-        data-layer="Sectiontitle"
-        className="Sectiontitle"
-        style={{
-          textAlign: "center",
-          color: "white",
-          fontSize: 24,
-          fontFamily: "Guardian Sans",
-          fontWeight: "400",
-          textTransform: "uppercase",
-          lineHeight: 20,
-          wordWrap: "break-word",
-          padding: "20px",
-        }}
-      >
-        {sectionHeading}
-      </div>
-    </div>
+      <tbody>
+        <tr>
+          <td
+            style={{
+              background: backgroundColor,
+              textAlign: "center",
+            }}
+          >
+            {/* Use padding instead of fixed height to avoid large blocks in Outlook */}
+            <div
+              data-layer="Sectiontitle"
+              className="Sectiontitle"
+              style={{
+                color: "white",
+                fontSize: 20,
+                fontFamily: "Guardian Sans",
+                fontWeight: 400,
+                textTransform: "uppercase",
+                lineHeight: "20px",
+                padding: "12px 10px",
+                msoLineHeightRule: "exactly",
+              }}
+            >
+              {sectionHeading}
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </tabnpm>
   );
 }

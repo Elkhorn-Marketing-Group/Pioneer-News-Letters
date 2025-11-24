@@ -15,70 +15,86 @@ export default function OneColOneImg({
   paragraphs = [],
 }: OneColOneImgProps) {
   return (
-    <div
-      style={{
-        width: 640,
-        height: "auto",
-        paddingTop: 15,
-        paddingBottom: 15,
-        flexDirection: "column",
-        justifyContent: "flex-start",
-        alignItems: "center",
-        gap: 23,
-        display: "inline-flex",
-      }}
+    <table
+      width={640}
+      align="center"
+      cellPadding={0}
+      cellSpacing={0}
+      style={{ borderCollapse: "collapse", paddingTop: 15, paddingBottom: 15 }}
     >
-      <div
-        style={{
-          flexDirection: "column",
-          justifyContent: "flex-start",
-          alignItems: "center",
-          gap: 23,
-          display: "flex",
-        }}
-      >
-        <img style={{ width: 415, height: 240 }} src={image} />
-        <div
-          style={{
-            width: 495,
-            display: "flex",
-            flexDirection: "column",
-            gap: 0,
-          }}
-        >
-          {paragraphs.map((paragraph, index) => {
-            // Check if the paragraph is a ParagraphItem
-            const isParagraphItem =
-              typeof paragraph === "object" && "text" in paragraph;
-            const content = isParagraphItem
-              ? (paragraph as ParagraphItem).text
-              : paragraph;
-            const isBullet = isParagraphItem
-              ? (paragraph as ParagraphItem).isBullet
-              : false;
-
-            return (
-              <div
-                key={index}
-                style={{
-                  color: "black",
-                  fontSize: 13,
-                  fontFamily: "Calibri",
-                  fontWeight: "400",
-                  wordWrap: "break-word",
-                  display: "flex",
-                  alignItems: "flex-start",
-                  gap: 8,
-                  marginBottom: isBullet ? 4 : 16,
-                }}
-              >
-                {isBullet && <span style={{ marginRight: 4 }}>•</span>}
-                <div style={{ flex: 1 }}>{content}</div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </div>
+      <tbody>
+        <tr>
+          <td align="center">
+            <img
+              src={image}
+              alt=""
+              width={415}
+              height={240}
+              style={{ display: "block" }}
+            />
+          </td>
+        </tr>
+        <tr>
+          <td align="center" style={{ paddingTop: 12 }}>
+            <table
+              width={495}
+              cellPadding={0}
+              cellSpacing={0}
+              style={{ borderCollapse: "collapse" }}
+            >
+              <tbody>
+                {paragraphs.map((paragraph, index) => {
+                  const isParagraphItem =
+                    typeof paragraph === "object" && "text" in paragraph;
+                  const content = isParagraphItem
+                    ? (paragraph as ParagraphItem).text
+                    : paragraph;
+                  const isBullet = isParagraphItem
+                    ? (paragraph as ParagraphItem).isBullet
+                    : false;
+                  return (
+                    <tr key={index}>
+                      <td
+                        style={{
+                          paddingBottom: isBullet ? 4 : 16,
+                          textAlign: "left",
+                        }}
+                      >
+                        {isBullet ? (
+                          <div>
+                            <span style={{ marginRight: 4 }}>•</span>
+                            <span
+                              style={{
+                                color: "black",
+                                fontSize: 13,
+                                fontFamily: "Calibri",
+                                fontWeight: 400,
+                              }}
+                            >
+                              {content}
+                            </span>
+                          </div>
+                        ) : (
+                          <div
+                            style={{
+                              color: "black",
+                              fontSize: 13,
+                              fontFamily: "Calibri",
+                              fontWeight: 400,
+                            }}
+                          >
+                            {content}
+                          </div>
+                        )}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   );
 }

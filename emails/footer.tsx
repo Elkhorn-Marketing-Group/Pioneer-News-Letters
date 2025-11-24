@@ -20,14 +20,20 @@ export default function Footer({
   return (
     <table
       width="640"
+      align="center"
       cellPadding="0"
       cellSpacing="0"
-      style={{ background: "#084A7D", padding: "24px 26px 15px 26px" }}
+      style={{
+        borderCollapse: "collapse",
+        background: "#084A7D",
+        padding: "24px 26px 15px 26px",
+        margin: "0 auto",
+      }}
     >
       <tbody>
         <tr>
           <td align="center">
-            <table width="588" cellPadding="0" cellSpacing="0">
+            <table width="588" align="center" cellPadding="0" cellSpacing="0">
               <tbody>
                 <tr>
                   <td

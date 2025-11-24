@@ -19,108 +19,92 @@ export default function OneImgCentered({
   paragraphs = [],
 }: OneImgCenteredProps) {
   return (
-    <div
-      style={{
-        width: 640,
-        paddingTop: 30,
-        paddingBottom: 20,
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        gap: 10,
-        display: "inline-flex",
-      }}
+    <table
+      width={640}
+      align="center"
+      cellPadding={0}
+      cellSpacing={0}
+      style={{ borderCollapse: "collapse", paddingTop: 30, paddingBottom: 20 }}
     >
-      <div
-        style={{
-          alignSelf: "stretch",
-          flexDirection: "column",
-          justifyContent: "flex-start",
-          alignItems: "center",
-          gap: 21,
-          display: "flex",
-        }}
-      >
-        <div
-          style={{
-            justifyContent: "center",
-            alignItems: "center",
-            gap: 34,
-            display: "inline-flex",
-          }}
-        >
-          {image ? (
-            <div
-              style={{
-                width: imageWidth,
-                height: imageHeight,
-                overflow: "hidden",
-                display: "block",
-              }}
-            >
+      <tbody>
+        <tr>
+          <td align="center">
+            {image ? (
               <img
                 src={image}
                 alt=""
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  display: "block",
-                }}
+                width={imageWidth}
+                height={imageHeight}
+                style={{ display: "block" }}
               />
-            </div>
-          ) : (
-            <div style={{ width: imageWidth, height: imageHeight }} />
-          )}
-        </div>
-
+            ) : (
+              <div style={{ width: imageWidth, height: imageHeight }} />
+            )}
+          </td>
+        </tr>
         {paragraphs.length > 0 && (
-          <div
-            style={{
-              width: 475,
-              margin: "0 auto",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              gap: 0,
-            }}
-          >
-            {paragraphs.map((paragraph, index) => {
-              const isParagraphItem =
-                typeof paragraph === "object" && "text" in paragraph;
-              const content = isParagraphItem
-                ? (paragraph as ParagraphItem).text
-                : paragraph;
-              const isBullet = isParagraphItem
-                ? (paragraph as ParagraphItem).isBullet
-                : false;
-
-              return (
-                <div
-                  key={index}
-                  style={{
-                    color: "black",
-                    fontSize: 13,
-                    fontFamily: "Calibri",
-                    fontWeight: "400",
-                    wordWrap: "break-word",
-                    width: "100%",
-                    display: "flex",
-                    alignItems: "flex-start",
-                    gap: 8,
-                    marginBottom: isBullet ? 4 : 16,
-                    justifyContent: "center",
-                    textAlign: "center",
-                  }}
-                >
-                  {isBullet && <span style={{ marginRight: 4 }}>•</span>}
-                  <div style={{ flex: isBullet ? 1 : "unset" }}>{content}</div>
-                </div>
-              );
-            })}
-          </div>
+          <tr>
+            <td align="center" style={{ paddingTop: 12 }}>
+              <table
+                width={475}
+                cellPadding={0}
+                cellSpacing={0}
+                style={{ borderCollapse: "collapse" }}
+              >
+                <tbody>
+                  {paragraphs.map((paragraph, index) => {
+                    const isParagraphItem =
+                      typeof paragraph === "object" && "text" in paragraph;
+                    const content = isParagraphItem
+                      ? (paragraph as ParagraphItem).text
+                      : paragraph;
+                    const isBullet = isParagraphItem
+                      ? (paragraph as ParagraphItem).isBullet
+                      : false;
+                    return (
+                      <tr key={index}>
+                        <td
+                          style={{
+                            paddingBottom: isBullet ? 4 : 16,
+                            textAlign: "center",
+                          }}
+                        >
+                          {isBullet ? (
+                            <div>
+                              <span style={{ marginRight: 4 }}>•</span>
+                              <span
+                                style={{
+                                  color: "black",
+                                  fontSize: 13,
+                                  fontFamily: "Calibri",
+                                  fontWeight: 400,
+                                }}
+                              >
+                                {content}
+                              </span>
+                            </div>
+                          ) : (
+                            <div
+                              style={{
+                                color: "black",
+                                fontSize: 13,
+                                fontFamily: "Calibri",
+                                fontWeight: 400,
+                              }}
+                            >
+                              {content}
+                            </div>
+                          )}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </td>
+          </tr>
         )}
-      </div>
-    </div>
+      </tbody>
+    </table>
   );
 }

@@ -14,88 +14,62 @@ export default function Header({
   letterIntro = "",
 }: HeaderProps) {
   return (
-    <div
-      style={{
-        width: 640,
-        flexDirection: "column",
-        justifyContent: "flex-start",
-        alignItems: "center",
-        gap: 30,
-        display: "inline-flex",
-      }}
+    <table
+      width={640}
+      align="center"
+      cellPadding={0}
+      cellSpacing={0}
+      style={{ borderCollapse: "collapse" }}
     >
-      <div
-        style={{
-          alignSelf: "stretch",
-          position: "relative",
-          flexDirection: "column",
-          justifyContent: "flex-start",
-          alignItems: "flex-start",
-          display: "flex",
-          gap: 0,
-        }}
-      >
-        <div
-          style={{ alignSelf: "stretch", height: 35, background: "#084A7D" }}
-        />
-        <img
-          style={{
-            alignSelf: "stretch",
-            height: 310,
-            display: "block",
-            margin: 0,
-          }}
-          src={headerImg}
-        />
-        <div
-          style={{
-            alignSelf: "stretch",
-            width: "100%",
-            margin: 0,
-            display: "block",
-          }}
-        >
-          <SectionDivider sectionHeading={letterTitle} />
-        </div>
-      </div>
-      <div
-        style={{
-          width: 475,
-          flexDirection: "column",
-          justifyContent: "flex-start",
-          alignItems: "center",
-          gap: 16,
-          display: "flex",
-        }}
-      >
-        <div
-          style={{
-            alignSelf: "stretch",
-            textAlign: "center",
-            color: "black",
-            fontSize: 18,
-            fontFamily: "Calibri",
-            fontWeight: "700",
-            wordWrap: "break-word",
-          }}
-        >
-          {letterHeading}
-        </div>
-        <div
-          style={{
-            alignSelf: "stretch",
-            height: 76,
-            textAlign: "center",
-            color: "black",
-            fontSize: 13,
-            fontFamily: "Calibri",
-            fontWeight: "400",
-            wordWrap: "break-word",
-          }}
-        >
-          {letterIntro}
-        </div>
-      </div>
-    </div>
+      <tbody>
+        <tr>
+          {/* Slightly smaller top bar to reduce overall header height in Outlook */}
+          <td style={{ height: 24, background: "#084A7D" }} />
+        </tr>
+        <tr>
+          <td>
+            {/* Avoid fixed pixel height for header image; let it scale naturally */}
+            <img
+              src={headerImg}
+              alt=""
+              style={{ display: "block", width: "100%", height: "auto" }}
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <SectionDivider sectionHeading={letterTitle} />
+          </td>
+        </tr>
+        <tr>
+          <td align="center" style={{ paddingTop: 20, paddingBottom: 20 }}>
+            <div style={{ width: 475, margin: "0 auto", textAlign: "center" }}>
+              <div
+                style={{
+                  color: "black",
+                  fontSize: 18,
+                  fontFamily: "Calibri",
+                  fontWeight: 700,
+                  marginBottom: 8,
+                }}
+              >
+                {letterHeading}
+              </div>
+              <div
+                style={{
+                  color: "black",
+                  fontSize: 13,
+                  fontFamily: "Calibri",
+                  fontWeight: 400,
+                  lineHeight: "1.3",
+                }}
+              >
+                {letterIntro}
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   );
 }
